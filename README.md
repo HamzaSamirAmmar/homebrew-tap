@@ -7,18 +7,21 @@ live network speeds in the macOS menu bar.
 
 ```bash
 brew tap HamzaSamirAmmar/tap
-brew install --cask nethud --no-quarantine
+brew install --cask nethud
+xattr -d com.apple.quarantine /Applications/NetHUD.app
 ```
 
 Or in one line:
 
 ```bash
-brew install --cask HamzaSamirAmmar/tap/nethud --no-quarantine
+brew install --cask HamzaSamirAmmar/tap/nethud && xattr -d com.apple.quarantine /Applications/NetHUD.app
 ```
 
-> `--no-quarantine` skips Gatekeeper's "unidentified developer" block — NetHUD
-> is ad-hoc signed (not notarized), so macOS would otherwise refuse to launch
-> the downloaded copy on first run.
+> NetHUD is ad-hoc signed (not notarized), so Gatekeeper blocks the downloaded
+> copy on first launch — the `xattr` line approves it once. If your Homebrew
+> supports `--no-quarantine` you can append that to the install instead; on
+> some versions the flag doesn't exist, so the `xattr` line is the reliable
+> path. Right-click → Open → Open in Finder works too.
 
 ## Casks
 
