@@ -7,7 +7,7 @@ cask "nethud" do
   desc "Live network speeds in the macOS menu bar"
   homepage "https://github.com/HamzaSamirAmmar/nethud"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "NetHUD.app"
 
