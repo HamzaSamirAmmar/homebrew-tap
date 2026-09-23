@@ -7,14 +7,18 @@ live network speeds in the macOS menu bar.
 
 ```bash
 brew tap HamzaSamirAmmar/tap
-brew install --cask nethud
+brew install --cask nethud --no-quarantine
 ```
 
 Or in one line:
 
 ```bash
-brew install --cask HamzaSamirAmmar/tap/nethud
+brew install --cask HamzaSamirAmmar/tap/nethud --no-quarantine
 ```
+
+> `--no-quarantine` skips Gatekeeper's "unidentified developer" block — NetHUD
+> is ad-hoc signed (not notarized), so macOS would otherwise refuse to launch
+> the downloaded copy on first run.
 
 ## Casks
 
