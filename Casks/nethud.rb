@@ -1,6 +1,6 @@
 cask "nethud" do
-  version "1.0.0"
-  sha256 "a5b5d51fc98112c2065ea7f917e201edfd974ab0719e8d2882129fca93b4728f"
+  version "1.0.1"
+  sha256 "5667b71017915dea4d1bb929a2912056cdf460f68f1fcebd8e60900fd896d298"
 
   url "https://github.com/HamzaSamirAmmar/nethud/releases/download/v#{version}/NetHUD-v#{version}.zip"
   name "NetHUD"
