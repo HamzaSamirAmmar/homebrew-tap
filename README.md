@@ -5,23 +5,39 @@ live network speeds in the macOS menu bar.
 
 ## Install
 
+The right command depends on your Homebrew version — check it with
+`brew --version`:
+
+**Homebrew 4.x or older** (quarantine flag still exists):
+
 ```bash
 brew tap HamzaSamirAmmar/tap
-brew install --cask nethud
-xattr -d com.apple.quarantine /Applications/NetHUD.app
+brew install --cask nethud --no-quarantine
 ```
 
 Or in one line:
 
 ```bash
-brew install --cask HamzaSamirAmmar/tap/nethud && xattr -d com.apple.quarantine /Applications/NetHUD.app
+brew install --cask HamzaSamirAmmar/tap/nethud --no-quarantine
+```
+
+**Homebrew 5.0+** (2025 and later — the flag was removed):
+
+```bash
+brew install --cask HamzaSamirAmmar/tap/nethud
+xattr -d com.apple.quarantine /Applications/NetHUD.app
+```
+
+**Not sure which one you have?** This works on any version — if it prints
+anything, your brew supports the flag:
+
+```bash
+brew install --help | grep quarantine
 ```
 
 > NetHUD is ad-hoc signed (not notarized), so Gatekeeper blocks the downloaded
-> copy on first launch — the `xattr` line approves it once. If your Homebrew
-> supports `--no-quarantine` you can append that to the install instead; on
-> some versions the flag doesn't exist, so the `xattr` line is the reliable
-> path. Right-click → Open → Open in Finder works too.
+> copy on first launch — the flag or the `xattr` line approves it once.
+> Right-click → Open → Open in Finder works too.
 
 ## Casks
 
