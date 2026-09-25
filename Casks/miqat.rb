@@ -1,6 +1,6 @@
 cask "miqat" do
-  version "1.0.0"
-  sha256 "95d7567c7c3320e39e2dec4fa0997d61029633c6e4865ea0ab33c10d6c816e26"
+  version "1.0.1"
+  sha256 "e6360a0753aa56f7fb500993ff07a7e91bce50308a145acf23ee116d1e2d1406"
 
   url "https://github.com/HamzaSamirAmmar/miqat/releases/download/v#{version}/Miqat-v#{version}.zip"
   name "Miqat"
